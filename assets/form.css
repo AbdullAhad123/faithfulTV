@@ -1,0 +1,95 @@
+.form_wrapper {
+    height: 100vh;
+    max-height: fit-content;
+    background: linear-gradient( #00000085 , #000000a1) , 
+    url('https://thumbs.dreamstime.com/b/dark-mosque-silhouette-hot-sun-orange-sky-background-vector-banner-poster-illustration-dark-mosque-silhouette-hot-sun-161971572.jpg') center no-repeat;
+    background-size: cover;
+    font-family: Raleway, sans-serif;
+    color: #afafaf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+.login {
+  padding: 40px 50px;
+  width: 480px;
+  border-radius: 5px;
+  background: #00000078;
+  box-shadow: 0px 0px 20px 2px #8787873f;
+}
+  .login input {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 14px 12px;
+    font-size: 16px;
+    border-radius: 2px; 
+    font-family: Raleway, sans-serif;
+  }
+
+.login input[type=text],
+.login input[type=password] {
+    outline: none;
+  border: 1px solid #c0c0c0;
+  transition: .2s;
+}
+
+.login input[type=text]:hover {
+  border-color: #ffc107;
+  outline: none;
+  transition: all .2s ease-in-out;
+} 
+
+.login input[type=submit] {
+  border: none;
+  background: #ffc107;
+  color: white;
+  font-weight: bold;  
+  transition: 0.2s;
+  margin: 20px 0px;
+}
+
+.login input[type=submit]:hover {
+  background: #ffc107;  
+}
+
+  .login h2 {
+    margin: 20px 0 0; 
+    color: #ffc107;
+    font-size: 28px;
+  }
+
+.login p {
+  margin-bottom: 40px;
+}
+
+.links {
+  display: table;
+  width: 100%;  
+  box-sizing: border-box;
+  border-top: 1px solid #c0c0c0;
+  margin-bottom: 10px;
+}
+
+.links a {
+  display: table-cell;
+  padding-top: 10px;
+}
+
+  .login h2,
+  .login p{
+    text-align: center;    
+  }
+
+.login span {
+  text-decoration: none;  
+  font-size: .8em;
+}
+
+.login span:visited {
+  color: inherit;
+}
