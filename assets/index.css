@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
+:root {
+    --bs-white: #ffffff;
+    --bs-yellow: #ffc107;
+    --bs-black: #000000;
+    --bs-lightblack: #0c0c0c;
+    --bs-grey: #656565;
+    --bs-lightgrey: #e7e7e7;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -11,6 +20,10 @@ html {
     overflow: hidden !important;
 }
 
+.bg_black {
+    background-color: var(--bs-lightblack)!Important;
+}
+
 /* main css  */
 
 #navbar {
@@ -18,28 +31,38 @@ html {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #000 !important;
+    background-color: var(--bs-black)!important;
+}
+
+#miniNavLogo {
+    display: none;
 }
 
 .search_bar {
     height: 50px;
-    width: 700px;
+    width: 600px;
     overflow: hidden;
     position: relative;
-    outline: 2px solid #656565;
+    outline: 2px solid var(--bs-grey);
+}
+
+.searchBarParent {
+    max-width: 800px;
+    min-width: 280px;
 }
 
 #searchBar {
     width: 100%;
     height: 100%;
-    background-color: #131313;
+    background-color: var(--bs-black);
     border: none !important;
-    color: white;
+    color: var(--bs-white);
     padding: 10px;
+    outline: none;
 }
 
 #searchBar::placeholder {
-    color: grey;
+    color: var(--bs-grey);
 }
 
 #searchBtn {
@@ -58,13 +81,23 @@ html {
     top: 10px;
     bottom: 0;
     right: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    /* border: 1px solid red; */
+    width: 140px;
+}
+
+.smallSearchBtn {
+    height: 30px;
+    width: 30px;
+    visibility: hidden;
 }
 
 .userAccount {
     height: 40px;
     width: 40px;
-    background-color: #cacaca;
-    color: #4e4e4e;
+    background-color: var(--bs-lightgrey);
+    color: var(--bs-grey);
 }
 
 .dropDown {
@@ -79,28 +112,28 @@ html {
 }
 
 .userListItem:hover {
-    background-color: #e7e7e7;
+    background-color: var(--bs-lightgrey);
 }
 
 .userListItem i {
-    color: rgb(72, 72, 72);
+    color: var(--bs-black);
 }
 
 .wrapper {
     min-height: 100vh;
     max-height: fit-content;
     width: auto;
-    background: black;
+    background: var(--bs-lightblack);
     display: flex;
-    overflow: hidden !important;
+    overflow: hidden!important;
 }
 
 .side_bar {
-    border: 1px solid rgb(62, 62, 62);
+    border: 1px solid ;
     height: 100vh;
     flex-basis: 18%;
-    min-width: 180px;
-    overflow: scroll !important;
+    min-width: 240px;
+    overflow: scroll!important;
 }
 
 /* width */
@@ -118,22 +151,29 @@ html {
 }
 
 .sidebarList li:hover {
-    color: #ffc107!important;
+    color: var(--bs-yellow)!important;
     transform: translateX(5px);
-    background-color: #1a1a1a;
+    background-color: var(--bs-black);
+}
+
+.listIcon {
+    width: 25px;
 }
 
 .sidebarList li:hover .listIcon{
-    color: #ffc107;
+    color: var(--bs-yellow);
 }
 
+#sideBarCanvas {
+    width: 280px;
+}
 
 .font_bold {
     font-weight: 500;
 }
 
 .active {
-    background-color: #1a1a1a;
+    background-color: var(--bs-black);
 }
 
 .main_body {
@@ -148,14 +188,75 @@ html {
 }
 
 .main_body::-webkit-scrollbar-track {
-    background: #4a4a4a;
+    background: var(--bs-lightgrey);
 }
 
 .main_body::-webkit-scrollbar-thumb {
-    background: #848484;
-    border-radius: 30px ;
+    background: var(--bs-grey);
+    border-radius: 30px;
 }
 
 .main_body::-webkit-scrollbar-thumb:hover {
-    background: #7d7d7d;
+    background: var(--bs-black);
+}
+
+/* media queries  */
+
+/* 992px  */
+@media (max-width: 992px) {
+    .side_bar {
+        display: none;
+        flex-basis: 0!important;
+    }   
+    .main_body {
+        flex-basis: 100%!important;
+    }
+    #search_bar {
+        display: none;
+    }
+    .smallSearchBtn {
+        visibility: visible!important;
+    }
+    #miniSearchBar {
+        display: block!important;
+    }
+    #sideBarCanvas {
+        display: block!important;
+    }
+}
+@media (min-width: 992px) {
+    .smallSearchBtn {        
+        visibility: hidden!important;
+    }
+    .offcanvas-backdrop.show,
+    #miniSearchBar.show {
+      display: none !important;
+    }
+    #sideBarCanvas {
+        display: none!important;
+    }
+/*   
+    #miniSearchBar.show {
+        display: none!important;
+    } */
+}
+/* 425px  */
+@media (max-width: 425px) {
+    .AccountDetails {
+        width: 100px!important;
+    }
+    #NavLogo {
+        display: none!important;
+    }
+    #miniNavLogo {
+        display: block!important;
+    }
+}
+@media (min-width: 425px) {
+    #NavLogo {
+        display: block!important;
+    }
+    #miniNavLogo {
+        display: none!important;
+    }
 }
