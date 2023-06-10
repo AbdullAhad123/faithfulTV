@@ -42,7 +42,8 @@
             <div class="container-fluid">
                 <div class="d-flex align-items-center">
                     <div class="text-center me-3">
-                        <button class="btn btn-warning py-1 px-3" data-bs-toggle="offcanvas" data-bs-target="#sideBarCanvas" aria-controls="sideBarCanvas">
+                        <button class="btn btn-warning py-1 px-3" data-bs-toggle="offcanvas"
+                            data-bs-target="#sideBarCanvas" aria-controls="sideBarCanvas">
                             <i class="fa fa-bars fa-lg"></i>
                         </button>
                     </div>
@@ -167,7 +168,7 @@
                         <i class="fa fa-x"></i>
                     </button>
                 </div>
-                <div class="offcanvas-body">
+                <div class="offcanvas-body vh-100 overflow-scroll">
                     <ul class="sidebarList list-unstyled p-2 py-2">
                         <li class="my-3 p-2 px-3 rounded-3 text-white font_bold active">
                             <i class="listIcon fa-solid fa-house me-3"></i>
@@ -214,7 +215,86 @@
             </div>
 
             <article class="main_body py-5">
+                <!-- tags section  -->
+                <div class="articleTagsSection mb-3">
+                    <ul class="quickcontenttagParent p-0 p-2 list-unstyled d-flex">
+                        <li class="quickcontentTag mx-1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="All">
+                            <span class="bg-warning p-1 px-3 rounded-3 fw-semibold small">
+                                All
+                            </span>
+                        </li>
+                        <li class="quickcontentTag mx-1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Mixes">
+                            <span class="bg-warning p-1 px-3 rounded-3 fw-semibold small">
+                                Mixes
+                            </span>
+                        </li>
+                        <li class="quickcontentTag mx-1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Quran">
+                            <span class="bg-warning p-1 px-3 rounded-3 fw-semibold small">
+                                Quran
+                            </span>
+                        </li>
+                        <li class="quickcontentTag mx-1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Nasheed">
+                            <span class="bg-warning p-1 px-3 rounded-3 fw-semibold small">
+                                Nasheed
+                            </span>
+                        </li>
+                        <li class="quickcontentTag mx-1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Podcasts">
+                            <span class="bg-warning p-1 px-3 rounded-3 fw-semibold small">
+                                Podcast
+                            </span>
+                        </li>
+                        <li class="quickcontentTag mx-1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Religious Recitation">
+                            <span class="bg-warning p-1 px-3 rounded-3 fw-semibold small">
+                                Religious Recitation
+                            </span>
+                        </li>
+                        <li class="quickcontentTag mx-1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Islamic Scholars">
+                            <span class="bg-warning p-1 px-3 rounded-3 fw-semibold small">
+                                Islamic Scholars
+                            </span>
+                        </li>
+                        <li class="quickcontentTag mx-1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Naat e Rasool">
+                            <span class="bg-warning p-1 px-3 rounded-3 fw-semibold small">
+                                Naat e Rasool
+                            </span>
+                        </li>
+                        <li class="quickcontentTag mx-1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Hamdo'Sanah">
+                            <span class="bg-warning p-1 px-3 rounded-3 fw-semibold small">
+                                Hamdo'Sanah
+                            </span>
+                        </li>
+                        <li class="quickcontentTag mx-1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Recommended">
+                            <span class="bg-warning p-1 px-3 rounded-3 fw-semibold small">
+                                Recommended
+                            </span>
+                        </li>
 
+                    </ul>
+                </div>
+                <!-- cards section  -->
+                <div class="articleBody border border-danger mt-1 p-3">
+                    <div class="articlebodyLayer border border-warning">
+                        <ul class="cardsParentSection p-0 list-unstyled m-0">
+                            <li class="mainContentCard col-lg-6">
+                                <div class="card p-1 bg_black">
+                                    <div class="d-flex flex-wrap">
+                                        <div class="audiocardImage">
+                                            <img src="../assets/img/thumbnails/musaddaseHaali.webp" class="img-fluid h-100 w-100" alt="">
+                                        </div>
+                                        <div class="audioDetails p-2">
+                                            <p class="title_text">
+                                                Musaddas e Haali - Junaid Jamshed 
+                                            </p>
+                                            <audio class="rounded-0 visually-hidden" src="../assets/audio/test.mp3" controls ></audio>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </article>
 
         </div>
@@ -260,8 +340,22 @@
                     $(".main_container").removeClass("d-none");
                 }
 
+            });
+            // for tool tip 
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+            
+            // for playing audio 
+
+            $(".card").click(function(){
+                // let audioFile = $("audio");
+
+                
+
             })
-        })
+            
+            // ready ends 
+        });
 
     </script>
 

@@ -104,6 +104,7 @@ html {
     width: 180px;
     position: absolute;
     right: 0px;
+    top: 50px;
 }
 
 .userListItem {
@@ -199,6 +200,59 @@ html {
 .main_body::-webkit-scrollbar-thumb:hover {
     background: var(--bs-black);
 }
+
+/* tags section  */
+
+.articleTagsSection {
+    height: 40px;
+    position: fixed;
+    top: 70px;
+}
+
+.quickcontentTag {
+    cursor: pointer;
+}
+
+/* body cards section  */
+
+.articleBody {
+    position: relative;
+    top: 70px;
+}
+
+.cardsParentSection {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mainContentCard {
+    border: 1px solid blueviolet;
+    height: 140px;
+}
+
+.card {
+    cursor: pointer;
+}
+
+.audiocardImage {
+    height: 120px;
+    width: 200px;
+    border: 1px solid red;
+}
+
+
+.title_text {
+    color: var(--bs-white);
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.card:hover .title_text {
+    text-decoration: 0.4px underline;
+}
+
+
+
 
 /* media queries  */
 
